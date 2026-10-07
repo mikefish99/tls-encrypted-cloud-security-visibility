@@ -32,6 +32,12 @@ This produced **six controlled test cases**.
 
 The environment, attack methodology, and monitoring configuration were kept consistent while the transport condition changed between HTTP and HTTPS, allowing TLS encryption to serve as the primary experimental variable.
 
+## Project Architecture
+
+The experimental environment was designed to compare network visibility under identical HTTP and HTTPS attack scenarios while keeping the target application, attack methodology, and monitoring tools consistent.
+
+![Experimental Architecture and Data Flow for HTTP and HTTPS Intrusion Detection Analysis](experimental-architecture.png)
+
 ## Experimental Design
 
 | Variable | HTTP Condition | HTTPS Condition |
