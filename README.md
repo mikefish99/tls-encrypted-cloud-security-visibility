@@ -96,8 +96,8 @@ The controlled comparison demonstrated that TLS did not eliminate network visibi
 
 ## Key Findings
 
-- TLS encryption significantly reduced application-layer visibility available to network-based intrusion detection.
-- Suricata's signature-based detection was more effective when payload content was directly observable.
-- Zeek continued to provide useful connection-level and TLS metadata after application payloads became encrypted.
-- Repeated login activity remained behaviorally observable even when request contents could not be inspected.
-- Effective monitoring of encrypted environments requires layered telemetry, including network metadata, authentication logs, application logs, endpoint visibility, and behavioral analysis.
+- TLS encryption significantly reduced application-layer visibility available to passive network-based monitoring.
+- Suricata's signature-based detection was more effective when application payload content was directly observable.
+- Zeek continued to provide useful TLS metadata and connection-level evidence after application payloads became encrypted.
+- Repeated login activity remained behaviorally observable even when request contents could not be directly inspected.
+- Effective monitoring of encrypted environments requires layered telemetry, combining network metadata with application, authentication, endpoint, and behavioral data sources.
