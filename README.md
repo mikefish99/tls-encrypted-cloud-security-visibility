@@ -83,6 +83,8 @@ The same controlled SQL injection scenario was then executed over HTTPS. Burp Su
 
 ## Results
 
+The controlled comparison demonstrated that TLS did not eliminate network visibility; instead, it changed the type of information available to network-based monitoring tools.
+
 | Capability | HTTP | HTTPS |
 | --- | --- | --- |
 | Application-layer payload visibility | Full | Not visible to passive network monitoring |
