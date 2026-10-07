@@ -92,6 +92,7 @@ The controlled comparison demonstrated that TLS did not eliminate network visibi
 | TLS metadata | Not applicable | Available through TLS/SSL logging |
 | Connection behavior | Visible | Visible |
 | Suricata application-layer detection | Stronger | Reduced |
+| Attack visibility | Direct application-layer evidence | Indirect metadata and behavioral evidence |
 | Analyst visibility | Payload + behavior | Metadata + behavior |
 
 ## Key Findings
