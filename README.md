@@ -102,3 +102,22 @@ The controlled comparison demonstrated that TLS did not eliminate network visibi
 - Zeek continued to provide useful TLS metadata and connection-level evidence after application payloads became encrypted.
 - Repeated login activity remained behaviorally observable even when request contents could not be directly inspected.
 - Effective monitoring of encrypted environments requires layered telemetry, combining network metadata with application, authentication, endpoint, and behavioral data sources.
+
+## Security Implications
+
+The experiment demonstrates why encrypted enterprise environments cannot rely exclusively on payload-based network inspection. As TLS adoption limits direct access to application-layer content, defenders must combine network telemetry with additional data sources such as authentication logs, application logs, endpoint telemetry, proxy records, and behavioral analytics.
+
+Suricata and Zeek provided complementary forms of visibility in this environment. Suricata was most useful when signature-relevant payload information was available, while Zeek preserved connection and TLS metadata that remained valuable for investigation under encryption.
+
+## Limitations & Future Work
+
+This project used a controlled AWS lab environment and a limited set of application-layer attack scenarios. The results demonstrate visibility differences between HTTP and HTTPS but are not intended to represent every encrypted enterprise environment or detection architecture.
+
+Future work could expand the environment through TLS fingerprinting, centralized SIEM integration, endpoint and authentication telemetry, additional attack scenarios, and machine-learning or behavioral approaches for detecting malicious activity without relying on decrypted payload content.
+
+## Documentation
+
+Additional implementation details, methodology, experimental evidence, analysis, and academic discussion are available in the original project materials:
+
+- [Full Master's Capstone Report](capstone_report.pdf)
+- [Capstone Presentation](capstone_presentation.pdf)
