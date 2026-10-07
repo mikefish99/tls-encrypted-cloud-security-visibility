@@ -52,6 +52,20 @@ The experimental environment was designed to compare network visibility under id
 **Independent variable:** TLS encryption  
 **Primary observations:** IDS alerts, application-layer visibility, TLS metadata, and connection behavior.
 
+## Experimental Evidence
+
+### HTTP: Application-Layer Visibility
+
+During the HTTP SQL injection test, Zeek recorded application-layer request activity in `http.log`. Because the traffic was unencrypted, HTTP request information remained available for network-based analysis and correlation with the controlled attack activity.
+
+![HTTP SQL Injection visibility captured in Zeek](http-sqli-zeek.png)
+
+### HTTPS: Visibility Shift to TLS Metadata
+
+The same controlled SQL injection scenario was then executed over HTTPS. Burp Suite could display the decrypted application-layer request because it operated as the intercepting proxy, while passive network monitoring no longer exposed the application-layer request payload. Zeek instead retained visibility into TLS session metadata and connection behavior.
+
+![HTTPS SQL Injection comparison between Burp Suite and Zeek](https-sqli-comparison.png)
+
 ## Technology Stack
 
 - **Cloud Platform:** AWS EC2
